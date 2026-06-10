@@ -1387,9 +1387,11 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     var el = document.querySelector('.footer-word');
     if (!el) return;
     function fit() {
+      el.style.display = 'inline';
       el.style.fontSize = '100px';
-      var ratio = el.parentElement.clientWidth / el.scrollWidth;
-      el.style.fontSize = (100 * ratio) + 'px';
+      var textW = el.getBoundingClientRect().width;
+      el.style.display = 'block';
+      el.style.fontSize = (100 * el.parentElement.clientWidth / textW) + 'px';
     }
     fit();
     window.addEventListener('resize', fit);
