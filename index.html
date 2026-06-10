@@ -471,8 +471,9 @@ body.no-motion .marquee-track { animation: none; }
 .svc-preview.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
 @media (hover: none), (pointer: coarse) { .svc-preview { display: none; } }
 
-/* services description for mobile (always visible) */
-.svc-desc-m { display: none; grid-column: 2 / -1; color: var(--muted); font-size: .95rem; margin-top: 8px; }
+/* services description — visible on all screen sizes */
+.svc-desc-m { display: block; color: var(--muted); font-size: .95rem; margin-top: 8px; line-height: 1.5; }
+.svc-row:hover .svc-desc-m { color: var(--accent-ink); opacity: .8; }
 
 /* ---------- process ---------- */
 .process { background: var(--bg-2); }
@@ -619,7 +620,6 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 @media (max-width: 720px) {
   .svc-row { grid-template-columns: 54px 1fr auto; gap: 12px; flex-wrap: wrap; }
   .svc-meta .svc-chips { display: none; }
-  .svc-desc-m { display: block; }
   .footer-top { grid-template-columns: 1fr; gap: 30px; }
   .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
   .scope-foot { grid-template-columns: 1fr; }
