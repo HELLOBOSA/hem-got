@@ -54,7 +54,7 @@
 
 /* ---------- blog hub ---------- */
 .blog-hero { padding-top: clamp(120px, 16vw, 190px); padding-bottom: clamp(54px, 8vw, 90px); }
-.blog-hero .display { max-width: 980px; font-size: clamp(3.6rem, 11vw, 8.5rem); letter-spacing: -0.06em; line-height: .88; margin-top: 22px; }
+.blog-hero .display { max-width: 980px; font-size: clamp(2rem, 11vw, 8.5rem); overflow-wrap: break-word; word-break: break-word; hyphens: auto; letter-spacing: -0.06em; line-height: .88; margin-top: 22px; }
 .blog-lead { max-width: 760px; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.35rem); margin-top: 26px; }
 .blog-topics { padding-top: 0; }
 .blog-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 2.5vw, 30px); }
@@ -62,11 +62,11 @@
 .blog-card-image { display: block; }
 .blog-card-image img { display: block; width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: cover; border-radius: 8px; margin-bottom: 22px; border: 1px solid var(--line); }
 .blog-card span { color: var(--accent); font-size: 12px; letter-spacing: .12em; }
-.blog-card h2 { font-family:'Bricolage Grotesque',sans-serif; font-weight: 700; font-size: clamp(1.35rem, 2.2vw, 2rem); letter-spacing: -0.035em; line-height: 1.02; margin-top: 22px; }
+.blog-card h2 { font-family:'Bricolage Grotesque',sans-serif; font-weight: 700; font-size: clamp(1.35rem, 2.2vw, 2rem); letter-spacing: -0.035em; line-height: 1.02; overflow-wrap: break-word; word-break: break-word; margin-top: 22px; }
 .blog-card p { color: var(--muted); margin-top: 14px; max-width: 36ch; }
 .article-hero { padding-top: clamp(120px, 16vw, 180px); }
 .article-back { display: inline-flex; margin-bottom: 26px; color: var(--muted); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
-.article h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight: 700; font-size: clamp(3rem, 8vw, 6.4rem); letter-spacing: -0.06em; line-height: .9; max-width: 1040px; margin-top: 22px; }
+.article h1 { font-family:'Bricolage Grotesque',sans-serif; font-weight: 700; font-size: clamp(1.8rem, 8vw, 6.4rem); letter-spacing: -0.06em; line-height: .9; overflow-wrap: break-word; word-break: break-word; hyphens: auto; max-width: 1040px; margin-top: 22px; }
 .article-hero > p { max-width: 760px; color: var(--muted); font-size: clamp(1.08rem, 2vw, 1.35rem); margin-top: 24px; }
 .article figure { margin-top: clamp(34px, 6vw, 72px); }
 .article figure img { width: 100%; height: min(990px, 69vw); aspect-ratio: 4 / 3; border-radius: 8px; border: 1px solid var(--line); object-fit: cover; }
@@ -441,6 +441,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   .svc-meta .svc-chips { display: none; }
   .svc-desc-m { display: block; }
   .footer-top { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { width: 88vw; }
   .scope-foot { grid-template-columns: 1fr; }
   .row-2 { grid-template-columns: 1fr; }
 }
@@ -583,10 +584,14 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       <div>
         <h4 data-en="Services">Tjänster</h4>
         <ul>
-          <li><a href="/#tjanster" data-en="Custom carpentry">Specialsnickeri</a></li>
+          <li><a href="/#tjanster" data-en="Small fixes &amp; mounting">Småfix &amp; montering</a></li>
+          <li><a href="/#tjanster" data-en="Custom carpentry &amp; storage">Specialsnickeri &amp; förvaring</a></li>
           <li><a href="/#tjanster" data-en="Bathroom &amp; kitchen">Badrum &amp; kök</a></li>
           <li><a href="/#tjanster" data-en="Painting">Måleri</a></li>
-          <li><a href="/#tjanster" data-en="Renovation">Renovering</a></li>
+          <li><a href="/#tjanster" data-en="Electrical &amp; lighting">El &amp; belysning</a></li>
+          <li><a href="/#tjanster" data-en="Move-in fix">Flytt-fix</a></li>
+          <li><a href="/#tjanster" data-en="Renovation &amp; project management">Renovering &amp; projektledning</a></li>
+          <li><a href="/#tjanster" data-en="Architecture &amp; design">Arkitektur &amp; design</a></li>
         </ul>
       </div>
       <div>
