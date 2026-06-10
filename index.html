@@ -642,7 +642,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 .pj-tile.pair .pj-media { aspect-ratio: 4 / 3; }
 .pj-tile.third .pj-media { aspect-ratio: 4 / 3; }
 .pj-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.16,1,.3,1), filter .35s; }
-.pj-media:hover img { transform: scale(1.035); filter: saturate(1.04) contrast(1.02); }
+.pj-media:not(.pj-ba):hover img { transform: scale(1.035); filter: saturate(1.04) contrast(1.02); }
 .pj-cap { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 12px; font-family:'Space Mono',monospace; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .pj-cap strong { color: var(--ink); font-weight: 400; }
 .pj-ba { cursor: ew-resize; touch-action: none; }
