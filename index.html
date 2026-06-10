@@ -1193,6 +1193,12 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     mMenu.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { mMenu.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false'); });
     });
+    document.addEventListener('click', function (e) {
+      if (mMenu.classList.contains('open') && !navToggle.contains(e.target) && !mMenu.contains(e.target)) {
+        mMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   /* ---------- reveal ---------- */
