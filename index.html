@@ -1361,12 +1361,12 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     var line = el.querySelector('.pj-ba-line');
     function set(x) {
       var rect = el.getBoundingClientRect();
-      var pct = Math.max(8, Math.min(92, ((x - rect.left) / rect.width) * 100));
+      var pct = Math.max(0, Math.min(100, ((x - rect.left) / rect.width) * 100));
       after.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
-      line.style.left = (Math.round((pct / 100) * rect.width) - 1) + 'px';
+      line.style.left = 'calc(' + pct + '% - 1px)';
     }
-    el.addEventListener('pointermove', function (e) { set(e.clientX); });
-    el.addEventListener('pointerdown', function (e) { set(e.clientX); });
+    el.addEventListener('pointermove', function (e) { if (e.buttons) set(e.clientX); });
+    el.addEventListener('pointerdown', function (e) { el.setPointerCapture(e.pointerId); set(e.clientX); });
   });
 
   var hidden = document.querySelectorAll('.pj-tile.hidden');
