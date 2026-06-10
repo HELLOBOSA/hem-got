@@ -550,7 +550,7 @@ form.lead-form { background: var(--elev); border: 1px solid var(--line); border-
 .footer ul { list-style: none; padding: 0; display: grid; gap: 11px; }
 .footer ul a { color: var(--ink-soft); transition: color .2s; }
 .footer ul a:hover { color: var(--accent); }
-.footer-word { font-family:'Bricolage Grotesque',sans-serif; font-weight: 700; line-height: .85; color: var(--ink); white-space: nowrap; display: block; text-align: left; letter-spacing: -0.06em; padding: 0; }
+.footer-word { font-family:'Bricolage Grotesque',sans-serif; font-weight: 700; line-height: .85; color: var(--ink); white-space: nowrap; display: block; text-align: left; letter-spacing: -0.06em; font-size: min(13.8vw, 198px); padding: 0 max(4vw, calc((100vw - 1320px) / 2)); box-sizing: border-box; overflow: hidden; }
 .footer-bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 28px 0 40px; font-family:'Space Mono',monospace; font-size: 11.5px; color: var(--muted); letter-spacing: .04em; }
 .footer-credit a { color: var(--ink-soft); transition: color .2s; }
 .footer-credit a:hover { color: var(--accent); }
@@ -1153,7 +1153,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       </div>
     </div>
   </div>
-  <div class="wrap"><div class="footer-word" aria-hidden="true">HEMREFORM</div></div>
+  <div class="footer-word" aria-hidden="true">HEMREFORM</div>
   <div class="wrap footer-bottom">
     <span data-en="Hemreform · Göteborg · Approved for F-tax">Hemreform · Göteborg · Godkänd för F-skatt</span>
     <span>© 2026 · DESIGN BY <a href="https://eolos.se" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none;transition:color .2s" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--muted)'">EOLOS DESIGN LAB</a></span>
@@ -1382,20 +1382,6 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   }
 })();
 
-  /* ---------- footer wordmark fit ---------- */
-  (function () {
-    var el = document.querySelector('.footer-word');
-    if (!el) return;
-    function fit() {
-      el.style.display = 'inline';
-      el.style.fontSize = '100px';
-      var textW = el.getBoundingClientRect().width;
-      el.style.display = 'block';
-      el.style.fontSize = (100 * el.parentElement.clientWidth / textW) + 'px';
-    }
-    fit();
-    window.addEventListener('resize', fit);
-  })();
 
 </script>
 
