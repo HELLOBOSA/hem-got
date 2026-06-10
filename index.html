@@ -579,6 +579,10 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 .hr-scope__btn:hover .hr-scope__arrow { transform: translateX(3px); }
 .hr-scope__fine { margin-top: 16px; font-size: .85rem; color: color-mix(in oklab, var(--bg) 55%, transparent); }
 @media (max-width: 860px) { .hr-scope__wrap { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .hr-scope__eyebrow { display: block; }
+  .hr-scope__eyebrow::before { display: none; }
+}
 
 /* ---------- mobile menu ---------- */
 .nav-toggle { display: none; }
