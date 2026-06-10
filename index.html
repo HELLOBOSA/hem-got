@@ -1388,16 +1388,20 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     if (!el) return;
     function fit() {
       var target = el.parentElement.clientWidth;
+      if (!target) return;
       el.style.display = 'inline';
       el.style.fontSize = '200px';
       var natural = el.getBoundingClientRect().width;
       el.style.display = '';
+      if (natural < 10) return;
       el.style.fontSize = (200 * target / natural) + 'px';
     }
+    /* only measure once Bricolage Grotesque is loaded — fallback font is narrower
+       and would produce an oversized calculation */
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(fit);
     }
-    setTimeout(fit, 50);
+    window.addEventListener('load', fit);
     window.addEventListener('resize', fit);
   })();
 
