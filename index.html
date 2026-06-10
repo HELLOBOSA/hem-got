@@ -387,6 +387,7 @@ body:not(.cursor-on) .cursor, body:not(.cursor-on) .cursor-ring { display: none;
 .brand sup { font-family: 'Space Mono', monospace; font-size: .55em; color: var(--accent); top: -.7em; }
 .brand .mk { width: 12px; height: 12px; border-radius: 3px; background: var(--accent); transform: rotate(45deg); }
 .nav-right { display: flex; align-items: center; gap: 18px; }
+.nav-links-desktop a { white-space: nowrap; }
 .lang { display: inline-flex; border: 1px solid var(--line-2); border-radius: 100px; overflow: hidden; font-family: 'Space Mono', monospace; font-size: 12px; }
 .lang button { padding: 8px 13px; color: var(--muted); letter-spacing: .05em; transition: color .2s, background-color .2s; }
 .lang button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
@@ -737,7 +738,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       </div>
       <div class="hero-cta">
         <a href="#kontakt" class="btn btn-primary btn-lg magnetic" data-en="Tell us about your project">Berätta om ditt projekt <span class="arrow">→</span></a>
-        <a href="#kontakt" class="btn btn-ghost btn-lg magnetic" data-en="Send photos for a quote">Skicka bilder för bedömning</a>
+        <a href="https://wa.me/46736566489" target="_blank" rel="noopener" class="btn btn-ghost btn-lg magnetic" data-en="Send photos via WhatsApp">Skicka bilder via WhatsApp</a>
       </div>
     </div>
   </div>
@@ -768,7 +769,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
 <!-- ===== SERVICES ===== -->
 <section class="section" id="tjanster">
   <div class="wrap">
-    <div class="sec-label rv"><span class="idx">(01 / 08)</span><h2 data-en="What we do">Vad vi gör</h2></div>
+    <div class="sec-label rv"><span class="idx">(01)</span><h2 data-en="What we do">Vad vi gör</h2></div>
     <div class="svc-list rv d1">
 
       <a class="svc-row" href="#kontakt" data-prev="Småfix · montering">
@@ -908,7 +909,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   <div class="wrap">
     <div class="pj-head">
       <div>
-        <div class="sec-label rv" style="margin-bottom:0"><span class="idx">(04 / 09)</span><h2 data-en="Selected projects">Utvalda projekt</h2></div>
+        <div class="sec-label rv" style="margin-bottom:0"><span class="idx">(04)</span><h2 data-en="Selected projects">Utvalda projekt</h2></div>
         <p class="pj-lead rv d1" data-en="A compact portfolio of finished spaces, before-and-after transformations and detailed renovation work.">Ett kuraterat urval av färdiga miljöer, före- och efterbilder och detaljerat renoveringsarbete.</p>
       </div>
       <span class="pj-count rv d2"><b>09</b> / 13 <span data-en="IMAGES">BILDER</span></span>
@@ -1057,6 +1058,10 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
             <input type="email" id="email" name="email" autocomplete="email" required data-ph="namn@exempel.se" data-en-ph="you@example.com">
             <div class="err" data-en="Enter a valid email.">Ange en giltig e-post.</div>
           </div>
+        </div>
+        <div class="field">
+          <label for="phone" data-en="Phone (optional)">Telefon (valfritt)</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel" data-ph="073 123 45 67" data-en-ph="+46 73 123 45 67">
         </div>
         <div class="field">
           <label for="message" data-en="What do you need help with? <span class='req'>*</span>">Vad behöver du hjälp med? <span class="req">*</span></label>
