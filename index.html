@@ -1392,7 +1392,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       el.style.fontSize = '200px';
       var natural = el.getBoundingClientRect().width;
       el.style.display = '';
-      el.style.fontSize = Math.floor(200 * target / natural) + 'px';
+      el.style.fontSize = (200 * target / natural) + 'px';
     }
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(fit);
