@@ -1389,15 +1389,17 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
     function fit() {
       var target = el.parentElement.clientWidth;
       if (!target) return;
-      el.style.display = 'inline';
-      el.style.fontSize = '200px';
-      var natural = el.getBoundingClientRect().width;
-      el.style.display = '';
+      /* measure via a probe on <html> — body has overflow-x:clip which
+         would clamp getBoundingClientRect to viewport width */
+      var probe = document.createElement('span');
+      probe.style.cssText = 'position:absolute;left:-9999px;top:0;visibility:hidden;white-space:nowrap;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;letter-spacing:-0.06em;font-size:200px';
+      probe.textContent = 'HEMREFORM';
+      document.documentElement.appendChild(probe);
+      var natural = probe.getBoundingClientRect().width;
+      probe.remove();
       if (natural < 10) return;
       el.style.fontSize = (200 * target / natural) + 'px';
     }
-    /* only measure once Bricolage Grotesque is loaded — fallback font is narrower
-       and would produce an oversized calculation */
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(fit);
     }
