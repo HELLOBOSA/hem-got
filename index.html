@@ -626,7 +626,7 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   .svc-meta .svc-chips { display: none; }
   .svc-desc-m { display: block; }
   .footer-top { grid-template-columns: 1fr; gap: 30px; }
-  .footer-bottom { width: 88vw; }
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
   .scope-foot { grid-template-columns: 1fr; }
   .row-2 { grid-template-columns: 1fr; }
 }
@@ -1365,8 +1365,8 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
       after.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
       line.style.left = 'calc(' + pct + '% - 1px)';
     }
-    el.addEventListener('pointermove', function (e) { if (e.buttons) set(e.clientX); });
-    el.addEventListener('pointerdown', function (e) { el.setPointerCapture(e.pointerId); set(e.clientX); });
+    el.addEventListener('pointermove', function (e) { set(e.clientX); });
+    el.addEventListener('pointerdown', function (e) { set(e.clientX); });
   });
 
   var hidden = document.querySelectorAll('.pj-tile.hidden');
